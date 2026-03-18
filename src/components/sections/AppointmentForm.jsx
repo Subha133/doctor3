@@ -16,6 +16,27 @@ const timeSlots = [
 
 const initialState = { name: "", phone: "", email: "", date: "", time: "", problem: "" };
 
+// ⚠️ Must be defined OUTSIDE the parent component.
+// If defined inside, React recreates it on every render → input unmounts → focus lost after each keystroke.
+function InputWrapper({ children, label, htmlFor, error, touched: t }) {
+  return (
+    <div>
+      <label htmlFor={htmlFor} className="block text-sm font-semibold text-slate-700 mb-1.5">
+        {label} <span className="text-red-400">*</span>
+      </label>
+      {children}
+      {t && error && (
+        <p className="error-text">
+          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          </svg>
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function AppointmentForm() {
   const { appointment, doctor, clinic } = doctorData;
   const { values, errors, touched, handleChange, handleBlur, isValid, reset } = useFormValidation(initialState);
@@ -36,21 +57,6 @@ export default function AppointmentForm() {
       setTimeout(() => setSubmitted(false), 6000);
     }, 800);
   };
-
-  const InputWrapper = ({ children, label, htmlFor, error, touched: t }) => (
-    <div>
-      <label htmlFor={htmlFor} className="block text-sm font-semibold text-slate-700 mb-1.5">
-        {label} <span className="text-red-400">*</span>
-      </label>
-      {children}
-      {t && error && <p className="error-text">
-        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-        </svg>
-        {error}
-      </p>}
-    </div>
-  );
 
   return (
     <section id="appointment" className="section-padding bg-gradient-to-br from-slate-50 to-primary-50/30" aria-labelledby="appointment-heading">

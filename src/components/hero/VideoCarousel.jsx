@@ -49,9 +49,10 @@ export default function VideoCarousel() {
             slideShadows: true,
           }}
           autoplay={{
-            delay: 3500,
+            delay: 1000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false,
+            stopOnLastSlide: false,
           }}
           pagination={{ clickable: true }}
           navigation={{

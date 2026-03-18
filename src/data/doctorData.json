@@ -1,19 +1,19 @@
 {
   "doctor": {
-    "name": "Dr. Arjun Mehta",
+    "name": "Dr. Deepti Arora",
     "prefix": "Dr.",
-    "firstName": "Arjun",
-    "lastName": "Mehta",
-    "degree": "MBBS, MD (Cardiology), DM (Interventional Cardiology)",
-    "specialization": "Senior Cardiologist & Interventional Heart Specialist",
+    "firstName": "Deepti",
+    "lastName": "Arora",
+    "degree": "MBBS, MD (Internal Medicine), Fellowship in Diabetology",
+    "specialization": "Sr. Physician & Diabetologist",
     "experience": "20+",
     "experienceLabel": "Years of Excellence",
-    "photo": "/doctor-photo.jpg",
-    "photoAlt": "Dr. Arjun Mehta – Senior Cardiologist",
+    "photo": "https://res.cloudinary.com/dqxrvtyii/image/upload/v1773837242/deepti_arora_pic_rogvly.jpg",
+    "photoAlt": "Dr. Deepti Arora – Sr. Physician & Diabetologist",
     "whatsapp": "919876543210",
-    "email": "dr.arjun@apolloheartclinic.com",
+    "email": "dr.deepti@apolloheartclinic.com",
     "phone": "+91 98765 43210",
-    "registrationNo": "MCI-12345-CARD"
+    "registrationNo": "MCI-12345-DIAB"
   },
   "clinic": {
     "name": "Apollo Heart Clinic",
@@ -39,70 +39,70 @@
     ]
   },
   "about": {
-    "heading": "A Legacy of Cardiac Excellence",
+    "heading": "Excellence in Internal Medicine & Diabetes Care",
     "paragraphs": [
-      "Dr. Arjun Mehta is one of India's most distinguished interventional cardiologists, renowned for his pioneering work in complex coronary interventions and structural heart disease. With over two decades of dedicated practice, he has transformed the lives of more than 15,000 patients across the country.",
-      "Trained at AIIMS New Delhi and further fellowship-trained at the Cleveland Clinic, USA, Dr. Mehta brings a rare combination of global expertise and compassionate patient care. He specialises in minimally invasive cardiac procedures, drastically reducing recovery times and improving outcomes.",
-      "A Fellow of the American College of Cardiology (FACC) and the Cardiological Society of India, Dr. Mehta also serves as a visiting consultant at several leading hospitals and has been recognised as one of India's Top 10 Cardiologists by Health Today magazine."
+      "Dr. Deepti Arora is one of India's most respected Senior Physicians and Diabetologists, renowned for her comprehensive approach to treating complex medical conditions and diabetes management. With over two decades of dedicated practice, she has transformed the lives of more than 15,000 patients across the country.",
+      "Trained at AIIMS New Delhi and further fellowship-trained in Diabetology, Dr. Arora brings a rare combination of global expertise and compassionate patient care. She specialises in evidence-based medicine and personalised diabetes management, focusing on holistic patient wellness and preventive care.",
+      "A Fellow of various medical societies and a recognized expert in Internal Medicine, Dr. Arora also serves as a visiting consultant at several leading hospitals and has been recognised as one of India's Top Diabetologists by leading healthcare publications."
     ],
     "highlights": [
-      { "icon": "🎓", "title": "Education", "desc": "AIIMS New Delhi + Cleveland Clinic Fellowship" },
-      { "icon": "🏆", "title": "Recognition", "desc": "India's Top 10 Cardiologists – Health Today" },
-      { "icon": "🌐", "title": "Memberships", "desc": "FACC, CSI, ESC Member" },
-      { "icon": "🔬", "title": "Research", "desc": "85+ Published Peer-Reviewed Papers" }
+      { "icon": "🎓", "title": "Education", "desc": "AIIMS New Delhi + Fellowship in Diabetology" },
+      { "icon": "🏆", "title": "Recognition", "desc": "Top Diabetologist – Healthcare Publications" },
+      { "icon": "🌐", "title": "Memberships", "desc": "API, RSSDI, FIMSA Member" },
+      { "icon": "🔬", "title": "Research", "desc": "50+ Published Peer-Reviewed Papers" }
     ]
   },
   "services": {
-    "heading": "Specialised Cardiac Services",
-    "subtitle": "Comprehensive heart care powered by cutting-edge technology and decades of expertise.",
+    "heading": "Comprehensive Medical & Diabetes Care",
+    "subtitle": "Expert internal medicine and diabetes management powered by evidence-based practice and compassionate care.",
     "list": [
       {
         "id": 1,
-        "icon": "❤️",
-        "title": "Coronary Angioplasty",
-        "description": "Advanced balloon angioplasty and stenting procedures to restore blood flow in blocked coronary arteries with precision and care.",
-        "tag": "Interventional"
+        "icon": "🩺",
+        "title": "Diabetes Management",
+        "description": "Comprehensive diabetes care including insulin therapy, continuous glucose monitoring, and lifestyle modification programs tailored to individual needs.",
+        "tag": "Diabetology"
       },
       {
         "id": 2,
-        "icon": "🫀",
-        "title": "Echocardiography",
-        "description": "High-resolution cardiac imaging to evaluate heart structure, function, and detect abnormalities using 3D and 4D echo technology.",
-        "tag": "Diagnostic"
+        "icon": "💉",
+        "title": "Insulin Pump Therapy",
+        "description": "Advanced insulin pump initiation, programming, and management for optimal glycemic control in Type 1 and Type 2 diabetes.",
+        "tag": "Diabetology"
       },
       {
         "id": 3,
-        "icon": "⚡",
-        "title": "Pacemaker Implantation",
-        "description": "Implantation of permanent and temporary pacemakers for rhythm management, including biventricular pacing for heart failure.",
-        "tag": "Electrophysiology"
+        "icon": "🔬",
+        "title": "Thyroid Disorders",
+        "description": "Expert diagnosis and management of hypothyroidism, hyperthyroidism, thyroid nodules, and other thyroid-related conditions.",
+        "tag": "Endocrinology"
       },
       {
         "id": 4,
         "icon": "📊",
-        "title": "Cardiac Stress Testing",
-        "description": "Treadmill tests (TMT), nuclear stress testing and pharmacological stress testing to evaluate heart performance under exertion.",
-        "tag": "Diagnostic"
+        "title": "Preventive Health Checkups",
+        "description": "Comprehensive health screenings including diabetes risk assessment, lipid profile, and cardiovascular risk evaluation.",
+        "tag": "Preventive"
       },
       {
         "id": 5,
-        "icon": "🩺",
-        "title": "Heart Failure Management",
-        "description": "Comprehensive, multidisciplinary care for acute and chronic heart failure, including device therapy and optimised medical management.",
+        "icon": "🏥",
+        "title": "Hypertension Management",
+        "description": "Personalized treatment plans for high blood pressure including lifestyle counseling, medication optimization, and regular monitoring.",
         "tag": "Management"
       },
       {
         "id": 6,
-        "icon": "🔍",
-        "title": "Cardiac CT & MRI",
-        "description": "Non-invasive coronary CT angiography and cardiac MRI for detailed anatomical and functional assessment of the heart and vessels.",
-        "tag": "Imaging"
+        "icon": "⚕️",
+        "title": "General Physician Services",
+        "description": "Diagnosis and treatment of common illnesses, fever management, infections, and chronic disease management with holistic approach.",
+        "tag": "Internal Medicine"
       }
     ]
   },
   "testimonials": {
     "heading": "Patient Stories",
-    "subtitle": "Thousands of families trust Dr. Mehta with their most precious asset — their heart.",
+    "subtitle": "Thousands of families trust Dr. Arora with their health and wellness journey.",
     "list": [
       {
         "id": 1,
@@ -110,8 +110,8 @@
         "age": 58,
         "location": "Mumbai",
         "rating": 5,
-        "text": "I was rushed to the hospital with a major heart attack. Dr. Mehta performed emergency angioplasty and saved my life. His expertise and calm demeanour gave my entire family hope. I owe my second chance to him.",
-        "procedure": "Emergency Angioplasty",
+        "text": "I had been suffering from uncontrolled diabetes for years. Dr. Arora's systematic approach and personalized treatment plan brought my sugar levels under perfect control. Her dedication and compassionate care are truly remarkable.",
+        "procedure": "Diabetes Management",
         "avatar": "RK"
       },
       {
@@ -120,8 +120,8 @@
         "age": 45,
         "location": "Pune",
         "rating": 5,
-        "text": "After being misdiagnosed for two years, Dr. Mehta correctly identified my condition within the first consultation. His thorough approach and detailed explanation made me feel truly cared for. Exceptional doctor!",
-        "procedure": "Complex Diagnosis",
+        "text": "After struggling with thyroid issues for years, Dr. Arora correctly diagnosed my condition and adjusted my medication perfectly. Her thorough approach and clear explanations made me feel truly cared for. Exceptional physician!",
+        "procedure": "Thyroid Disorder Treatment",
         "avatar": "SV"
       },
       {
@@ -130,8 +130,8 @@
         "age": 63,
         "location": "Ahmedabad",
         "rating": 5,
-        "text": "The pacemaker implantation went perfectly. Dr. Mehta and his team were professional throughout. I'm now back to my morning walks and feel 20 years younger. Cannot thank him enough for this new lease on life.",
-        "procedure": "Pacemaker Implantation",
+        "text": "Dr. Arora's insulin pump therapy changed my life. I'm now living normally without the constant worry of blood sugar fluctuations. Her expertise and supportive team make every visit comfortable and productive.",
+        "procedure": "Insulin Pump Therapy",
         "avatar": "AS"
       },
       {
@@ -140,8 +140,8 @@
         "age": 39,
         "location": "Bangalore",
         "rating": 5,
-        "text": "As someone with a family history of heart disease, I was anxious about my check-up. Dr. Mehta was incredibly patient and reassuring, explaining everything clearly. His preventive approach has given me true peace of mind.",
-        "procedure": "Preventive Cardiac Check",
+        "text": "As someone with a family history of diabetes, I was anxious about my health. Dr. Arora was incredibly patient and reassuring, explaining preventive measures clearly. Her holistic approach has given me true peace of mind.",
+        "procedure": "Preventive Health Checkup",
         "avatar": "PN"
       }
     ]
@@ -184,19 +184,55 @@
       }
     ]
   },
+  "videoSection": {
+    "heading": "Watch & Learn",
+    "subtitle": "Dr. Arora shares expert insights on diabetes management, internal medicine, and preventive healthcare through these educational videos.",
+    "items": [
+      {
+        "id": 1,
+        "videoUrl": "https://res.cloudinary.com/dqxrvtyii/video/upload/v1773832969/Deepti_ma_am_reel_6_mpdfe6.mp4",
+        "thumbnail": "https://res.cloudinary.com/dqxrvtyii/image/upload/v1773835957/deepti_maam_reel_6_mwrzo9.jpg",
+        "title": "Deepti Ma'am Reel 6",
+        "description": "Educational content on diabetes management and metabolic health",
+        "duration": "0:59",
+        "category": "Patient Education",
+        "views": "124K"
+      },
+      {
+        "id": 2,
+        "videoUrl": "https://res.cloudinary.com/dqxrvtyii/video/upload/v1773832734/Deepti_maam_reel_2_1_honqdh.mp4",
+        "thumbnail": "https://res.cloudinary.com/dqxrvtyii/image/upload/v1773835942/deepti_maam_reel_2_oq2sdy.jpg",
+        "title": "Deepti Ma'am Reel 2",
+        "description": "Expert insights on preventive healthcare and wellness",
+        "duration": "0:45",
+        "category": "Prevention",
+        "views": "89K"
+      },
+      {
+        "id": 3,
+        "videoUrl": "https://res.cloudinary.com/dqxrvtyii/video/upload/v1773832655/Deepti_ma_am_reel_5_1_romv3b.mp4",
+        "thumbnail": "https://res.cloudinary.com/dqxrvtyii/image/upload/v1773835950/deepti_maam_reel_5_gdigam.jpg",
+        "title": "Deepti Ma'am Reel 5",
+        "description": "Expert guidance on diabetes care and healthy living",
+        "duration": "0:52",
+        "category": "Patient Education",
+        "views": "96K"
+      }
+    ]
+  },
   "appointment": {
     "heading": "Book Your Consultation",
     "subtitle": "Take the first step toward a healthier heart. Schedule your personalised consultation today.",
     "confirmationMessage": "Thank you! Your appointment request has been sent via WhatsApp. We will confirm your slot within 2 hours."
   },
   "footer": {
-    "tagline": "Committed to cardiac excellence since 2004. Your heart deserves the best care.",
+    "tagline": "Dedicated to medical excellence and compassionate patient care. Your health is our priority.",
     "quickLinks": [
       { "label": "About", "href": "#about" },
       { "label": "Services", "href": "#services" },
       { "label": "Testimonials", "href": "#testimonials" },
       { "label": "Book Appointment", "href": "#appointment" }
     ],
-    "copyright": "© 2024 Dr. Arjun Mehta – Apollo Heart Clinic. All rights reserved."
+    "copyright": "© 2024 Dr. Deepti Arora – Apollo Heart Clinic. All rights reserved."
   }
 }
