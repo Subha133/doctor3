@@ -88,13 +88,13 @@ function ReelCard({ video, index, onClick }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.07 }}
-      className="flex items-end gap-2"
+      className="flex items-end gap-3"
     >
       {/* ── Portrait card ── */}
       <div
         onClick={() => onClick(video)}
         className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 flex-shrink-0"
-        style={{ width: "160px", aspectRatio: "9/16" }}
+        style={{ width: "min(180px, 45vw)", aspectRatio: "9/16" }}
       >
         {video.videoUrl ? (
           <>
@@ -128,10 +128,10 @@ function ReelCard({ video, index, onClick }) {
 
         {/* Top badges */}
         <div className="absolute top-2 left-2 right-2 flex justify-between items-start">
-          <span className="bg-black/50 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded-full leading-4 border border-white/10 truncate max-w-[80px]">
+          <span className="bg-black/50 backdrop-blur-sm text-white text-[8px] sm:text-[9px] font-bold px-1.5 sm:px-2 py-0.5 rounded-full leading-4 border border-white/10 truncate max-w-[70px] sm:max-w-[80px]">
             {video.category}
           </span>
-          <span className="bg-black/50 backdrop-blur-sm text-white text-[9px] font-mono font-semibold px-2 py-0.5 rounded-full leading-4 border border-white/10 flex-shrink-0">
+          <span className="bg-black/50 backdrop-blur-sm text-white text-[8px] sm:text-[9px] font-mono font-semibold px-1.5 sm:px-2 py-0.5 rounded-full leading-4 border border-white/10 flex-shrink-0">
             {video.duration}
           </span>
         </div>
@@ -151,24 +151,24 @@ function ReelCard({ video, index, onClick }) {
         </div>
 
         {/* Bottom info */}
-        <div className="absolute bottom-0 left-0 right-0 p-2.5">
+        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-2.5">
           <div className="flex items-center gap-1.5 mb-1.5">
-            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary-400 to-teal-400 flex items-center justify-center text-white text-[8px] font-bold ring-1 ring-white/30 flex-shrink-0">
+            <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-primary-400 to-teal-400 flex items-center justify-center text-white text-[7px] sm:text-[8px] font-bold ring-1 ring-white/30 flex-shrink-0">
               {doctorData.doctor.firstName[0]}
             </div>
-            <span className="text-white text-[10px] font-semibold drop-shadow truncate">
+            <span className="text-white text-[9px] sm:text-[10px] font-semibold drop-shadow truncate">
               {doctorData.doctor.firstName} {doctorData.doctor.lastName}
             </span>
           </div>
-          <p className="text-white font-bold text-[11px] leading-tight line-clamp-2 drop-shadow">
+          <p className="text-white font-bold text-[10px] sm:text-[11px] leading-tight line-clamp-2 drop-shadow">
             {video.title}
           </p>
           <div className="flex items-center gap-1 mt-1">
-            <svg className="w-2.5 h-2.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
             </svg>
-            <span className="text-white/50 text-[9px] font-medium">{video.views}</span>
+            <span className="text-white/50 text-[8px] sm:text-[9px] font-medium">{video.views}</span>
           </div>
         </div>
       </div>
@@ -234,9 +234,9 @@ export default function VideoSection() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              {/* Mobile: horizontal snap scroll */}
+              {/* Mobile: horizontal snap scroll - optimized for smaller screens */}
               <div
-                className="flex gap-4 overflow-x-auto pb-4 sm:hidden"
+                className="flex gap-3 overflow-x-auto pb-6 sm:hidden -mx-4 px-4"
                 style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}
               >
                 {filtered.map((video, i) => (
@@ -246,8 +246,15 @@ export default function VideoSection() {
                 ))}
               </div>
 
-              {/* Desktop: wrapped grid */}
-              <div className="hidden sm:flex flex-wrap gap-6 justify-start">
+              {/* Tablet: 2 columns */}
+              <div className="hidden sm:flex md:hidden flex-wrap gap-4 justify-start">
+                {filtered.map((video, i) => (
+                  <ReelCard key={video.id} video={video} index={i} onClick={setActiveVideo} />
+                ))}
+              </div>
+
+              {/* Desktop: wrapped grid with more columns */}
+              <div className="hidden md:flex flex-wrap gap-6 justify-start">
                 {filtered.map((video, i) => (
                   <ReelCard key={video.id} video={video} index={i} onClick={setActiveVideo} />
                 ))}
