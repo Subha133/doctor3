@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section id="about" className="section-padding bg-white" aria-labelledby="about-heading">
       <div className="container-max mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
 
           {/* Left: Image & credentials */}
           <motion.div
@@ -20,7 +20,7 @@ export default function About() {
           >
             <div className="relative inline-block w-full max-w-md mx-auto lg:mx-0">
               {/* Main image frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-hero bg-gradient-to-br from-primary-100 to-teal-50 aspect-[4/5] flex items-center justify-center">
+              <div className="relative rounded-3xl overflow-hidden shadow-hero bg-gradient-to-br from-primary-100 to-teal-50 aspect-[4/5] max-h-[500px] sm:max-h-none flex items-center justify-center">
                 <img
                   src={doctor.photo}
                   alt={doctor.photoAlt}
@@ -40,21 +40,21 @@ export default function About() {
               </div>
 
               {/* Registration badge */}
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white border border-slate-100 rounded-2xl shadow-card px-6 py-3 flex items-center gap-3 whitespace-nowrap">
-                <div className="w-9 h-9 bg-teal-500/10 rounded-xl flex items-center justify-center">
-                  <svg className="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -bottom-4 sm:-bottom-5 left-1/2 -translate-x-1/2 bg-white border border-slate-100 rounded-xl sm:rounded-2xl shadow-card px-4 sm:px-5 py-2.5 sm:py-3 flex items-center gap-2 sm:gap-3 whitespace-nowrap max-w-[90%] sm:max-w-none">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-teal-500/10 rounded-lg sm:rounded-xl flex items-center justify-center">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-xs text-slate-400 font-medium">Medical Registration</p>
-                  <p className="text-sm font-bold text-slate-800">{doctor.registrationNo}</p>
+                  <p className="text-sm sm:text-base font-bold text-slate-800 truncate max-w-[180px] sm:max-w-none">{doctor.registrationNo}</p>
                 </div>
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary-100 rounded-2xl -z-10" />
-              <div className="absolute -bottom-8 -left-4 w-16 h-16 bg-teal-100 rounded-2xl -z-10" />
+              <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 bg-primary-100 rounded-xl sm:rounded-2xl -z-10" />
+              <div className="absolute -bottom-6 sm:-bottom-8 -left-3 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-teal-100 rounded-xl sm:rounded-2xl -z-10" />
             </div>
           </motion.div>
 
@@ -70,7 +70,7 @@ export default function About() {
               title={about.heading}
             />
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               {about.paragraphs.map((para, i) => (
                 <motion.p
                   key={i}
@@ -78,7 +78,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                  className="text-slate-600 leading-relaxed text-base"
+                  className="text-slate-600 leading-relaxed text-sm sm:text-base"
                 >
                   {para}
                 </motion.p>
@@ -86,7 +86,7 @@ export default function About() {
             </div>
 
             {/* Highlights grid */}
-            <div className="grid sm:grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-8">
               {about.highlights.map((h, i) => (
                 <motion.div
                   key={i}

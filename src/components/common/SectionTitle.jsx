@@ -7,7 +7,7 @@ export default function SectionTitle({ tag, title, subtitle, centered = false, l
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`mb-14 ${centered ? "text-center" : ""}`}
+      className={`mb-8 sm:mb-10 lg:mb-14 ${centered ? "text-center" : ""}`}
     >
       {tag && (
         <span className={`section-tag ${light ? "bg-white/10 text-white" : ""}`}>
@@ -16,14 +16,14 @@ export default function SectionTitle({ tag, title, subtitle, centered = false, l
         </span>
       )}
       <h2
-        className={`font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight
+        className={`font-display text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight
           ${light ? "text-white" : "text-slate-900"}`}
       >
         {title}
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-lg leading-relaxed max-w-2xl ${centered ? "mx-auto" : ""}
+          className={`mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed max-w-2xl ${centered ? "mx-auto" : ""}
             ${light ? "text-white/70" : "text-slate-500"}`}
         >
           {subtitle}

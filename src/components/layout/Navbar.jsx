@@ -36,26 +36,26 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
           ${scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-            : "bg-transparent py-5"}`}
+            ? "bg-white/95 backdrop-blur-md shadow-md py-2 sm:py-3"
+            : "bg-transparent py-3 sm:py-5"}`}
       >
-        <div className="container-max px-4 sm:px-6 lg:px-8 mx-auto flex items-center justify-between">
+        <div className="container-max px-3 sm:px-4 lg:px-8 mx-auto flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-2 sm:gap-3 group"
             aria-label="Go to top"
           >
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-display font-bold text-lg
+            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-display font-bold text-base sm:text-lg
               ${scrolled ? "bg-primary-600 text-white" : "bg-white/20 text-white backdrop-blur-sm border border-white/30"}`}>
               {doctor.prefix}
             </div>
-            <div className="text-left">
-              <div className={`font-display font-bold text-sm leading-tight
+            <div className="text-left max-w-[120px] sm:max-w-none">
+              <div className={`font-display font-bold text-xs sm:text-sm leading-tight truncate
                 ${scrolled ? "text-slate-900" : "text-white"}`}>
                 {doctor.firstName} {doctor.lastName}
               </div>
-              <div className={`text-xs font-medium leading-tight
+              <div className={`text-xs font-medium leading-tight truncate
                 ${scrolled ? "text-primary-600" : "text-white/70"}`}>
                 {clinic.name}
               </div>
@@ -125,7 +125,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[72px] left-0 right-0 z-40 bg-white shadow-xl border-t border-slate-100 md:hidden"
+            className="fixed top-[60px] sm:top-[68px] left-0 right-0 z-40 bg-white shadow-xl border-t border-slate-100 md:hidden max-h-[calc(100vh-60px)] overflow-y-auto"
           >
             <div className="px-4 py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
